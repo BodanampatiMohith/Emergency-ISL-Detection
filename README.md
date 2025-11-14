@@ -323,9 +323,6 @@ This implementation is based on the research:
 - Object detection outperforms classification for this task
 - Hybrid models (CNN+RNN) effectively capture spatiotemporal features
 
-![Research Implementation](images/Screenshot%202025-11-14%20200145.png)
-*Figure: Research paper implementation and results*
-
 ---
 
 ## 🤝 Contributing
