@@ -1,0 +1,40 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Core numerical & data utilities
+numpy==1.23.5
+pandas==1.5.3
+scipy==1.10.1
+scikit-learn==1.3.2
+matplotlib==3.7.2
+seaborn==0.12.2
+pillow==9.5.0
+opencv-python==4.7.0.68
+tqdm==4.67.1
+
+# TensorFlow stack (CPU-only)
+tensorflow-cpu==2.12.0
+tensorboard==2.12.3
+tensorflow-io-gcs-filesystem==0.31.0
+
+# PyTorch stack (CPU-only)
+torch==2.0.1+cpu
+torchvision==0.15.2+cpu
+
+# Detection & vision tooling
+ultralytics==8.0.0
+pyyaml==6.0.2
+labelImg==1.8.6
+lxml==4.9.4
+
+# Video processing
+moviepy==1.0.3
+imageio==2.31.2
+imageio-ffmpeg==0.4.8
+
+# Evaluation & monitoring helpers
+py-cpuinfo==9.0.0
+psutil==5.9.5
+
+# Interactive / notebook tooling
+ipython==8.14.0
+jupyter==1.0.0
