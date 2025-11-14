@@ -6,6 +6,8 @@
 [![Algorithms](https://img.shields.io/badge/Algorithms-Documentation-9c27b0.svg)](ALGORITHM.md)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Setup Guide](https://img.shields.io/badge/Setup-Documentation-4285F4.svg)](setup.md)
+[![Architecture](https://img.shields.io/badge/Architecture-Documentation-34A853.svg)](architecture.md)
 
 ---
 
