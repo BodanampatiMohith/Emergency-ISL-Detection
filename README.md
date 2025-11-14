@@ -124,79 +124,38 @@ For detailed information, please refer to the following documentation files:
 
 ## 🚀 Quick Start
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/Emergency-ISL-Detection.git
-cd Emergency-ISL-Detection
-```
+1. **Clone and setup**
+   ```bash
+   git clone https://github.com/BodanampatiMohith/Emergency-ISL-Detection.git
+   cd Emergency-ISL-Detection
+   ```
 
-2. **Follow the [Setup Guide](setup.md)** for complete installation instructions
+2. **Follow the [Setup Guide](setup.md)** for complete installation and configuration
 
 3. **Run the application**
-```bash
-# For training
-python main_pipeline.py
-
-# For real-time detection
-python realtime_detection.py
-```
-
----
+   ```bash
+   # For training
+   python main_pipeline.py
+   
+   # For real-time detection
+   python realtime_detection.py
+   ```
 
 ---
 
-## 📦 Data Preparation
+## 📖 Documentation
 
-### Step 1: Extract Frames from Videos
-```bash
-python -m src.data_prep
-```
-This will:
-- Extract 5 evenly-spaced frames from each video
-- Resize frames to 150×150 pixels
-- Create 60/20/20 train/val/test splits
-
-### Step 2: Prepare YOLO Annotations
-```bash
-python -m src.yolo_data_prep
-```
-This will:
-- Create bounding box annotations for hands
-- Generate YOLO format labels
-- Organize data for YOLOv5 training
+- [Setup Guide](setup.md) - Installation and configuration
+- [System Architecture](architecture.md) - Model details and specifications
+- [Dataset Information](#-dataset-information) - Dataset structure and usage
 
 ---
 
-## 🤖 Model Training
+## 🤖 Model Training & Evaluation
 
-### Recommended Pipeline Usage
-
-Run the orchestrated pipeline to handle data preparation, training, and evaluation:
-
-```powershell
-# Train or evaluate selected models (defaults to all)
-python main_pipeline.py --models 3dcnn vgg_lstm yolo
-
-# Skip training and only evaluate existing checkpoints
-python main_pipeline.py --skip-training --models 3dcnn vgg_lstm
-```
-
-> **Note:** YOLOv5 training on CPU can take many hours per epoch. If running on CPU only, consider reducing `--epochs`, `--img`, or `--batch` when invoking `yolov5/train.py` directly.
-
-### Individual Model Training Entrypoints
-
-```powershell
-# Model I: 3D CNN
-python -m src.train_3dcnn
-
-# Model II: VGG16 + LSTM
-python -m src.train_classifier
-
-# Model III: YOLOv5 (Ultralytics API)
-python -m src.train_yolov5
-```
-
-Each classifier uses five 150×150 RGB frames as input. YOLOv5 consumes 416–640 sized images depending on the selected configuration.
+For detailed training instructions and model evaluation, please refer to:
+- [Setup Guide](setup.md) - For environment setup and dependencies
+- [Architecture](architecture.md) - For model specifications and training procedures
 
 ---
 
